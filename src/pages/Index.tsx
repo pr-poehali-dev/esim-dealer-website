@@ -75,7 +75,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-electric-blue to-vibrant-purple rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-electric-blue to-vibrant-purple rounded-lg flex items-center justify-center floating-element">
                 <Icon name="Wifi" className="w-5 h-5 text-white" />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent">
@@ -101,23 +101,45 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/10 via-vibrant-purple/10 to-tech-green/10" />
+      <section className="relative py-20 overflow-hidden tech-grid">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/10 via-vibrant-purple/10 to-tech-green/10 gradient-animate" />
+        <div className="absolute top-0 left-0 w-full h-full">
+          <img 
+            src="/img/15fd7bb7-0b49-4b96-8910-80862a10d1c8.jpg" 
+            alt="Tech Background"
+            className="w-full h-full object-cover opacity-20 mix-blend-multiply"
+          />
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 right-20 w-16 h-16 bg-gradient-to-r from-electric-blue to-vibrant-purple rounded-full opacity-20 floating-element" style={{animationDelay: '0s'}} />
+        <div className="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-r from-vibrant-purple to-tech-green rounded-full opacity-30 floating-element" style={{animationDelay: '2s'}} />
+        <div className="absolute top-40 left-1/4 w-8 h-8 bg-gradient-to-r from-tech-green to-electric-blue rounded-full opacity-25 floating-element" style={{animationDelay: '4s'}} />
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-gradient-to-r from-electric-blue/20 to-vibrant-purple/20 text-electric-blue border-electric-blue/30">
+            <Badge className="mb-6 bg-gradient-to-r from-electric-blue/20 to-vibrant-purple/20 text-electric-blue border-electric-blue/30 floating-element">
               🚀 Новое поколение мобильной связи
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-electric-blue via-vibrant-purple to-tech-green bg-clip-text text-transparent leading-tight">
-              MoreSim
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            
+            <div className="relative mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-electric-blue via-vibrant-purple to-tech-green bg-clip-text text-transparent leading-tight gradient-animate floating-element">
+                MoreSim
+              </h1>
+              {/* Glowing effect behind title */}
+              <div className="absolute inset-0 text-5xl md:text-7xl font-bold bg-gradient-to-r from-electric-blue via-vibrant-purple to-tech-green opacity-20 blur-xl">
+                MoreSim
+              </div>
+            </div>
+            
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed floating-element" style={{animationDelay: '0.5s'}}>
               Дилер eSIM адаптеров и роуминговых eSIM по всем популярным направлениям мира. 
               Современные технологии для безграничного общения.
             </p>
 
             {/* Device Compatibility Checker */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 max-w-md mx-auto mb-12">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 max-w-md mx-auto mb-12 pulse-glow floating-element" style={{animationDelay: '1s'}}>
               <div className="flex items-center space-x-2 mb-4">
                 <Icon name="Smartphone" className="w-6 h-6 text-electric-blue" />
                 <h3 className="text-lg font-semibold">Проверка совместимости</h3>
@@ -168,7 +190,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center floating-element" style={{animationDelay: '1.5s'}}>
               <Button size="lg" className="bg-gradient-to-r from-electric-blue to-vibrant-purple hover:from-vibrant-purple hover:to-electric-blue px-8">
                 <Icon name="ShoppingCart" className="w-5 h-5 mr-2" />
                 Купить адаптер
@@ -183,10 +205,24 @@ const Index = () => {
       </section>
 
       {/* eSIM Adapters Section */}
-      <section id="adapters" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="adapters" className="py-16 bg-white relative overflow-hidden">
+        {/* Background Graphics */}
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-5">
+          <img 
+            src="/img/0bceef55-918d-4b7d-bc47-2b384ad9b3b4.jpg" 
+            alt="Devices Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Floating particles */}
+        <div className="absolute top-10 left-10 w-2 h-2 bg-electric-blue rounded-full particle-float" style={{animationDelay: '0s'}} />
+        <div className="absolute top-20 right-32 w-3 h-3 bg-vibrant-purple rounded-full particle-float" style={{animationDelay: '1s'}} />
+        <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-tech-green rounded-full particle-float" style={{animationDelay: '2s'}} />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent floating-element">
               eSIM Адаптеры
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -195,8 +231,8 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {esimAdapters.map((adapter) => (
-              <Card key={adapter.id} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-blue-50/30">
+            {esimAdapters.map((adapter, index) => (
+              <Card key={adapter.id} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gradient-to-br from-white to-blue-50/30 floating-element" style={{animationDelay: `${index * 0.3}s`}}>
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">
                     <CardTitle className="text-2xl font-bold text-gray-800">
@@ -211,13 +247,13 @@ const Index = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="relative h-48 bg-gradient-to-br from-electric-blue/10 to-vibrant-purple/10 rounded-lg overflow-hidden">
+                  <div className="relative h-48 bg-gradient-to-br from-electric-blue/10 to-vibrant-purple/10 rounded-lg overflow-hidden pulse-glow">
                     <img 
                       src="/img/5c693c8f-99ec-4979-bad3-181e97caed74.jpg" 
                       alt={adapter.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-2xl font-bold text-electric-blue">
+                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-2xl font-bold text-electric-blue floating-element">
                       {adapter.price} ₽
                     </div>
                   </div>
@@ -252,7 +288,7 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <Button className="w-full bg-gradient-to-r from-electric-blue to-vibrant-purple hover:from-vibrant-purple hover:to-electric-blue">
+                    <Button className="w-full bg-gradient-to-r from-electric-blue to-vibrant-purple hover:from-vibrant-purple hover:to-electric-blue pulse-glow">
                       <Icon name="ShoppingCart" className="w-4 h-4 mr-2" />
                       Купить сейчас
                     </Button>
@@ -265,10 +301,22 @@ const Index = () => {
       </section>
 
       {/* Roaming Plans Section */}
-      <section id="roaming" className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="container mx-auto px-4">
+      <section id="roaming" className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+        {/* World Map Background */}
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="/img/9a92dd00-7eb6-4463-a869-8fcdca10709c.jpg" 
+            alt="World Connectivity"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Tech grid overlay */}
+        <div className="absolute inset-0 tech-grid opacity-30" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent floating-element">
               Роуминговые eSIM
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -278,15 +326,15 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {roamingPlans.map((region, index) => (
-              <Card key={index} className="overflow-hidden border-0 bg-white/80 backdrop-blur-sm shadow-xl">
-                <CardHeader className="bg-gradient-to-r from-electric-blue to-vibrant-purple text-white text-center py-6">
-                  <div className="text-4xl mb-2">{region.flag}</div>
+              <Card key={index} className="overflow-hidden border-0 bg-white/80 backdrop-blur-sm shadow-xl floating-element hover:shadow-2xl transition-all duration-500" style={{animationDelay: `${index * 0.5}s`}}>
+                <CardHeader className="bg-gradient-to-r from-electric-blue to-vibrant-purple text-white text-center py-6 gradient-animate">
+                  <div className="text-4xl mb-2 floating-element" style={{animationDelay: `${index * 0.2}s`}}>{region.flag}</div>
                   <CardTitle className="text-2xl font-bold">{region.country}</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     {region.plans.map((plan, planIndex) => (
-                      <div key={planIndex} className="p-4 rounded-lg bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-100">
+                      <div key={planIndex} className="p-4 rounded-lg bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-100 hover:shadow-md transition-shadow">
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-lg font-semibold text-electric-blue">{plan.data}</span>
                           <span className="text-2xl font-bold text-gray-800">{plan.price} ₽</span>
@@ -296,7 +344,7 @@ const Index = () => {
                             <Icon name="Calendar" className="w-4 h-4 mr-1" />
                             {plan.days} дней
                           </span>
-                          <Button size="sm" className="bg-gradient-to-r from-tech-green to-emerald-500 hover:from-emerald-500 hover:to-tech-green">
+                          <Button size="sm" className="bg-gradient-to-r from-tech-green to-emerald-500 hover:from-emerald-500 hover:to-tech-green pulse-glow">
                             Купить
                           </Button>
                         </div>
@@ -309,7 +357,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-electric-blue to-vibrant-purple hover:from-vibrant-purple hover:to-electric-blue px-8">
+            <Button size="lg" className="bg-gradient-to-r from-electric-blue to-vibrant-purple hover:from-vibrant-purple hover:to-electric-blue px-8 floating-element pulse-glow">
               <Icon name="Globe" className="w-5 h-5 mr-2" />
               Смотреть все направления
             </Button>
@@ -318,10 +366,15 @@ const Index = () => {
       </section>
 
       {/* Support & Contact Section */}
-      <section id="support" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="support" className="py-16 bg-white relative overflow-hidden">
+        {/* Animated background particles */}
+        <div className="absolute top-32 left-20 w-4 h-4 bg-electric-blue/30 rounded-full particle-float" style={{animationDelay: '0s'}} />
+        <div className="absolute bottom-20 right-32 w-3 h-3 bg-vibrant-purple/30 rounded-full particle-float" style={{animationDelay: '2s'}} />
+        <div className="absolute top-20 right-20 w-2 h-2 bg-tech-green/30 rounded-full particle-float" style={{animationDelay: '1s'}} />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent floating-element">
               Техподдержка
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -330,8 +383,8 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 border-0 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-electric-blue to-vibrant-purple rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 border-0 hover:shadow-lg transition-shadow floating-element pulse-glow" style={{animationDelay: '0s'}}>
+              <div className="w-16 h-16 bg-gradient-to-r from-electric-blue to-vibrant-purple rounded-full flex items-center justify-center mx-auto mb-4 floating-element">
                 <Icon name="MessageCircle" className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Онлайн-чат</h3>
@@ -341,8 +394,8 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-0 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-tech-green to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-0 hover:shadow-lg transition-shadow floating-element pulse-glow" style={{animationDelay: '1s'}}>
+              <div className="w-16 h-16 bg-gradient-to-r from-tech-green to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 floating-element">
                 <Icon name="Phone" className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Горячая линия</h3>
@@ -352,8 +405,8 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-0 hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-gradient-to-r from-vibrant-purple to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-0 hover:shadow-lg transition-shadow floating-element pulse-glow" style={{animationDelay: '2s'}}>
+              <div className="w-16 h-16 bg-gradient-to-r from-vibrant-purple to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 floating-element">
                 <Icon name="Mail" className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Email поддержка</h3>
@@ -367,12 +420,15 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-slate-900 to-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
+      <footer className="bg-gradient-to-r from-slate-900 to-gray-900 text-white py-12 relative overflow-hidden">
+        {/* Subtle tech pattern */}
+        <div className="absolute inset-0 tech-grid opacity-10" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-electric-blue to-vibrant-purple rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-electric-blue to-vibrant-purple rounded-lg flex items-center justify-center floating-element">
                   <Icon name="Wifi" className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">MoreSim</h3>
