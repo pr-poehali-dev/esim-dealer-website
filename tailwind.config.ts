@@ -32,6 +32,10 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				'electric-blue': '#6366F1',
+				'vibrant-purple': '#8B5CF6',
+				'tech-green': '#10B981',
+				'dark-slate': '#11F937',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
