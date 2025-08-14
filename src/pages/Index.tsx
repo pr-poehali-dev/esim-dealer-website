@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Icon from '@/components/ui/icon'\nimport MatrixBackground from '@/components/MatrixBackground'
+import Icon from '@/components/ui/icon'
+import MatrixBackground from '@/components/MatrixBackground'
 
 const Index = () => {
   const [deviceModel, setDeviceModel] = useState('')
