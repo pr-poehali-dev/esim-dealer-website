@@ -204,6 +204,95 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Visual Gallery Section */}
+      <section className="py-16 bg-gradient-to-r from-slate-100 to-blue-100 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent floating-element">
+              Технологии будущего
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              MoreSim объединяет передовые технологии для создания идеального мобильного опыта
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="relative group floating-element" style={{animationDelay: '0s'}}>
+              <img 
+                src="/img/1f5ae6de-26d6-4f5d-b075-18dc86723e2c.jpg" 
+                alt="Business Professional"
+                className="w-full h-64 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Для бизнеса</h3>
+                <p className="text-sm opacity-90">Профессиональные решения для корпоративных клиентов</p>
+              </div>
+            </div>
+
+            <div className="relative group floating-element" style={{animationDelay: '0.3s'}}>
+              <img 
+                src="/img/3d5a4c54-7f72-4404-9b88-b91b823730e2.jpg" 
+                alt="Travel Experience"
+                className="w-full h-64 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Путешествия</h3>
+                <p className="text-sm opacity-90">Связь без границ в любой точке мира</p>
+              </div>
+            </div>
+
+            <div className="relative group floating-element" style={{animationDelay: '0.6s'}}>
+              <img 
+                src="/img/2c34c0d5-609b-4a90-a47c-a9ff4211f034.jpg" 
+                alt="Future Technology"
+                className="w-full h-64 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl" />
+              <div className="absolute bottom-4 left-4 text-white">
+                <h3 className="text-xl font-bold mb-2">Будущее связи</h3>
+                <p className="text-sm opacity-90">Инновации в области мобильных технологий</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="relative floating-element pulse-glow" style={{animationDelay: '0.9s'}}>
+              <img 
+                src="/img/ae8cbef3-794a-4a23-812f-4d36fe190425.jpg" 
+                alt="Compatible Devices"
+                className="w-full h-80 object-cover rounded-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-electric-blue/80 to-transparent rounded-2xl" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-3">Совместимость</h3>
+                <p className="text-lg mb-4">Работает с любыми устройствами</p>
+                <Button className="bg-white text-electric-blue hover:bg-gray-100">
+                  Проверить устройство
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative floating-element pulse-glow" style={{animationDelay: '1.2s'}}>
+              <img 
+                src="/img/a6e6ec0f-9377-4c9c-b6c3-1a8758788e0f.jpg" 
+                alt="eSIM Technology"
+                className="w-full h-80 object-cover rounded-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-vibrant-purple/80 to-transparent rounded-2xl" />
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-2xl font-bold mb-3">Технология eSIM</h3>
+                <p className="text-lg mb-4">Микрочипы нового поколения</p>
+                <Button className="bg-white text-vibrant-purple hover:bg-gray-100">
+                  Узнать больше
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* eSIM Adapters Section */}
       <section id="adapters" className="py-16 bg-white relative overflow-hidden">
         {/* Background Graphics */}
@@ -367,6 +456,15 @@ const Index = () => {
 
       {/* Support & Contact Section */}
       <section id="support" className="py-16 bg-white relative overflow-hidden">
+        {/* Support team image background */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <img 
+            src="/img/5013dbea-d11d-494d-a99c-14bfae07ff2e.jpg" 
+            alt="Support Team Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
         {/* Animated background particles */}
         <div className="absolute top-32 left-20 w-4 h-4 bg-electric-blue/30 rounded-full particle-float" style={{animationDelay: '0s'}} />
         <div className="absolute bottom-20 right-32 w-3 h-3 bg-vibrant-purple/30 rounded-full particle-float" style={{animationDelay: '2s'}} />
@@ -374,11 +472,18 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
+            <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden floating-element pulse-glow">
+              <img 
+                src="/img/5013dbea-d11d-494d-a99c-14bfae07ff2e.jpg" 
+                alt="Our Support Team"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-electric-blue to-vibrant-purple bg-clip-text text-transparent floating-element">
               Техподдержка
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Мы всегда готовы помочь вам с настройкой и использованием наших решений
+              Наша команда экспертов готова помочь 24/7 с настройкой и использованием ваших устройств
             </p>
           </div>
 
